@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./assets/favicon.c636a92a.png" type="image/x-icon">
+  <title>Facebook – log in or sign up</title>
+  <link rel="stylesheet" href="./assets/index.3165569c.css">
+</head>
+
+<body class="bg-gray-100 h-screen items-center justify-center flex">
+  <div class="container mx-auto flex  flex-wrap lg:p-28 md:p-4 p-4 sm:flex-col md:flex-row items-center justify-center">
+    <div class="left lg:w-1/2 w-full flex-col items-center lg:items-start justify-center flex my-10">
+      <img src="./assets/fb.9531e960.svg" alt="Facebbok" class="w-2/3 m-[-28px]  p-0">
+      <p class="p-0 text-2xl text-center lg:text-left">Facebook helps you connect and share with the people in your
+        life.</p>
+    </div>
+    <div class="right lg:w-1/2 bg-slate- w-full flex-col flex items-center justify-center px-14">
+      <div class="box  flex items-center justify-cente flex-col bg-white  p-4 shadow-xl rounded-lg w-[400px]">
+        <input type="email" placeholder="Email address or phone number"
+          class="p-3 outline-blue-500 border rounded-md mb-2 border-gray-300 block w-full">
+        <div class="p-3 outline-blue-500 border rounded-md mb-2 border-gray-300 w-full  flex"> <input type="password"
+            name="password" id="password" placeholder="Password" class="outline-none w-full">
+          <span class="eye cursor-pointer" id="togglePass">
+            <span id="eye-slash"> <i class="far fa-eye-slash"></i></span>
+            <span id="eye"> <i class="far fa-eye"></i></span>
+          </span>
+        </div>
+        <button
+          class="btn bg-[#1877F2] my-2 p-3 block w-full rounded-md text-white font-bold text-xl hover:bg-[#106feb]">Log
+          In</button>
+        <a href="#"
+          class="text-blue-600 decoration-current decoration-1 decoration-solid hover:underline mt-2 mb-4">Forgotten
+          password?</a>
+        <hr class="w-full border-gray-300 mb-4">
+        <button class="btn btn bg-green-600 my-2 p-3 rounded-md text-white font-bold text-xl hover:bg-[#0e9c42]">Create
+          New
+          Account</button>
+      </div>
+      <p class="mt-6 text-sm text-center"><span class="font-bold">Create a Page</span> for a celebrity, brand or
+        business.</p>
+    </div>
+  </div>
+</body>
+<script>
+  let pass = document.querySelector("#password")
+  let togglepas = document.querySelector("#togglePass")
+  let eye = document.querySelector("#eye")
+  let eye_slash = document.querySelector("#eye-slash")
+
+  eye.classList.toggle("hidden")
+
+  togglepas.addEventListener("click", function () {
+
+    let ett = pass.getAttribute("type")
+
+    if (ett == "password") {
+      eye_slash.classList.toggle("hidden")
+      eye.classList.toggle("hidden")
+      pass.setAttribute("type", "text")
+    }
+    else {
+      eye_slash.classList.toggle("hidden")
+      eye.classList.toggle("hidden")
+      pass.setAttribute("type", "password")
+    }
+  })
+
+</script>
+
+</html>
